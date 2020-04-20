@@ -1,0 +1,38 @@
+MODEL:
+  META_ARCHITECTURE: "GeneralizedRCNN"
+  # WEIGHT: "catalog://ImageNetPretrained/MSRA/R-50"
+  WEIGHT: "/work/maskrcnn/R-50.pkl"
+  RPN:
+    PRE_NMS_TOP_N_TEST: 6000
+    POST_NMS_TOP_N_TEST: 1000
+  ROI_BOX_HEAD:
+    FEATURE_EXTRACTOR: "ResNet50Conv5ROIFeatureExtractorNeighbor"
+    # NEIGHBOR_EXPAND: 1.2
+    # ROI_EXPAND: True
+DATASETS:
+  TRAIN: ("coco_2014_train", "coco_2014_valminusminival")
+  TEST: ("coco_2014_minival",)
+SOLVER:
+  BASE_LR: 0.00125
+  WEIGHT_DECAY: 0.0001
+  STEPS: (960000, 1280000)
+  # MAX_ITER: 1440000
+  MAX_ITER: 50000
+  IMS_PER_BATCH: 1
+  ## 2 for one card
+  # BASE_LR: 0.0025
+  # WEIGHT_DECAY: 0.0001
+  # STEPS: (480000, 640000)
+  # # MAX_ITER: 720000
+  # MAX_ITER: 50000
+  # IMS_PER_BATCH: 2
+  ## 8 for 4 cards
+  # BASE_LR: 0.01
+  # WEIGHT_DECAY: 0.0001
+  # STEPS: (120000, 160000)
+  # MAX_ITER: 180000
+  # IMS_PER_BATCH: 8
+DATALOADER:
+  NUM_WORKERS: 1
+TEST:
+  IMS_PER_BATCH: 2
