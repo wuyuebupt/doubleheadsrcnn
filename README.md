@@ -41,14 +41,14 @@ GPU: 4x Tesla P100-PCIE-16GB
 ### Models
 Results on the COCO 2017 validation set:
 
-| Models         | AP |  AP_0.5 | AP_0.7 | AP_s | AP_m | AP_l | Link |
+| Backbone         | AP |  AP_0.5 | AP_0.7 | AP_s | AP_m | AP_l | Link |
 | -------------- | ------ | ---- |  ---- |  ---- |  ---- |  ---- |  ---- | 
 | ResNet-50-FPN  | 40.3 | 60.3 | 44.2 | 22.4 | 43.3 | 54.3 | [model](https://drive.google.com/open?id=1KnRoyJQjS9rQUTCFEm54AIsUy2qbZTK_) |
 | ResNet-101-FPN | 41.9 | 62.4 | 45.9 | 23.9 | 45.2 | 55.8 | [model](https://drive.google.com/open?id=18CMdq4U9TZOCz7SSj-3c27xkfqO_gvwP) |
 
 Results on COCO 2017 test-dev:
 
-| Models         | AP |  AP_0.5 | AP_0.7 | AP_s | AP_m | AP_l | Link |
+| Backbone         | AP |  AP_0.5 | AP_0.7 | AP_s | AP_m | AP_l | Link |
 | -------------- | ------ | ---- |  ---- |  ---- |  ---- |  ---- |  ---- | 
 | ResNet-101-FPN | 42.3 | 62.8 | 46.3 | 23.9 | 44.9 | 54.3 | [bbox](https://drive.google.com/open?id=1jBQ2S_eDUyEJplZtofAAHOvkqo4UmlpA) |
 
